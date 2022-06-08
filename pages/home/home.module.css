@@ -1,0 +1,15 @@
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  width: 83%;
+  margin-left: 1em;
+  justify-content: center;
+}
+.mainContent p {
+  width: 30%;
+  margin-bottom: 1em;
+}
+.mainContent button {
+  width: 10%;
+  margin-top: 7em;
+}

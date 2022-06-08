@@ -1,0 +1,25 @@
+.mainContent {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  min-height: 300px;
+}
+.mainContent form {
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mainContent form input,
+.mainContent form button {
+  margin-bottom: 1em;
+  width: 100%;
+  padding: 0.5em;
+}
+
+.errorMsg {
+  color: crimson;
+  font-weight: 900;
+}
