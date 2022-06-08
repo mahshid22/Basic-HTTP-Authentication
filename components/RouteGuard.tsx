@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { dividerClasses } from "@mui/material";
 
 type Props = {
   children: React.ReactElement;
@@ -7,10 +8,11 @@ type Props = {
 
 export const RouteGuard = ({ children }: Props) => {
   const router = useRouter();
+  const [authorized, setAuthorized] = useState<boolean>(false);
 
   useEffect(() => {
     authCheck(router.asPath);
-    const hideContent = () => false;
+    const hideContent = () => setAuthorized(false);
     router.events.on("routeChangeStart", hideContent);
     router.events.on("routeChangeComplete", authCheck);
     return () => {
@@ -28,8 +30,12 @@ export const RouteGuard = ({ children }: Props) => {
         pathname: "/",
         query: { returnUrl: router.asPath },
       });
+    } else {
+      setAuthorized(true);
     }
   }
-
-  return children;
+  if (authorized) return children;
+  else {
+    return <div></div>;
+  }
 };
