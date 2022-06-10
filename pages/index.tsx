@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import * as React from "react";
-import { login } from "../services/user.service";
+import { login } from "services/user.service";
 import styles from "../styles/main.module.css";
 import { useRouter } from "next/router";
 

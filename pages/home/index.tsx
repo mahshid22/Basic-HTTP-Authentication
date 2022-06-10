@@ -1,7 +1,7 @@
 import { NextPage } from "next";
-import { logout } from "../../services/user.service";
+import { logout } from "services/user.service";
 import styles from "./home.module.css";
-import Cat from "../../svgs/cat.svg";
+import Cat from "svgs/cat.svg";
 const Home: NextPage = () => {
   const userName =
     typeof window !== "undefined"
