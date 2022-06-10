@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import { logout } from "../../services/user.service";
 import styles from "./home.module.css";
+import Cat from "../../svgs/cat.svg";
 const Home: NextPage = () => {
   const userName =
     typeof window !== "undefined"
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
         try that log out and without submiting form just redirect to /home and
         see how gaurd act
       </p>
+      <Cat />
       <button type="button" onClick={logout}>
         logOut
       </button>
