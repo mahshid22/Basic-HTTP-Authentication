@@ -21,7 +21,3 @@ export const logout = () => {
   localStorage.removeItem("user");
   Router.push("/");
 };
-
-function getAll() {
-  //   return fetchWrapper.get(baseUrl);
-}
